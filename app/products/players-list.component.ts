@@ -4,10 +4,10 @@ import {ProductFilterPipe} from './product-filter.pipe';
 import {StarComponent} from '../shared/star.component'
 @Component({
     selector: 'fc-maneger',
-    templateUrl: 'app/players/players-list.component.html',
-    styleUrls: ['app/players/product-list.component.css'],
-    pipes:[ProductFilterPipe],
-    directives: [StarComponent] 
+    templateUrl: 'app/products/players-list.component.html',
+    styleUrls: ['app/products/product-list.component.css'],
+    pipes: [ProductFilterPipe],
+    directives: [StarComponent]
 })
 export class PlayersListComponent implements OnInit {
     pageTitle: string = 'Product List';
@@ -74,7 +74,7 @@ export class PlayersListComponent implements OnInit {
     ngOnInit(): void {
         console.log('In OnInit');
     }
-    onRatingClicked(message:string): void{
-          this.pageTitle='Product List: ' + message;
+    onRatingClicked(message: string): void {
+        this.pageTitle = 'Product List: ' + message;
     }
 }

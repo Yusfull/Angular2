@@ -1,4 +1,4 @@
-System.register(['angular2/core', './product-filter.pipe', '../shared/star.component'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,29 +10,19 @@ System.register(['angular2/core', './product-filter.pipe', '../shared/star.compo
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, product_filter_pipe_1, star_component_1;
-    var PlayersListComponent;
+    var core_1;
+    var ProductService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (product_filter_pipe_1_1) {
-                product_filter_pipe_1 = product_filter_pipe_1_1;
-            },
-            function (star_component_1_1) {
-                star_component_1 = star_component_1_1;
             }],
         execute: function() {
-            PlayersListComponent = (function () {
-                function PlayersListComponent() {
-                    this.pageTitle = 'Product List';
-                    this.imageWidth = 50;
-                    this.imageMargin = 2;
-                    this.showImage = false;
-                    this.listFilter = 'cat';
-                    this.products = [
-                        {
+            ProductService = (function () {
+                function ProductService() {
+                }
+                ProductService.prototype.getProducts = function () {
+                    return [{
                             "productId": 1,
                             "productName": "Leaf Rake",
                             "productCode": "GDN-0011",
@@ -81,32 +71,16 @@ System.register(['angular2/core', './product-filter.pipe', '../shared/star.compo
                             "price": 35.95,
                             "starRating": 4.6,
                             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
-                        }
-                    ];
-                }
-                PlayersListComponent.prototype.toggleImage = function () {
-                    this.showImage = !this.showImage;
+                        }];
                 };
-                PlayersListComponent.prototype.ngOnInit = function () {
-                    console.log('In OnInit');
-                };
-                PlayersListComponent.prototype.onRatingClicked = function (message) {
-                    this.pageTitle = 'Product List: ' + message;
-                };
-                PlayersListComponent = __decorate([
-                    core_1.Component({
-                        selector: 'fc-maneger',
-                        templateUrl: 'app/players/players-list.component.html',
-                        styleUrls: ['app/players/product-list.component.css'],
-                        pipes: [product_filter_pipe_1.ProductFilterPipe],
-                        directives: [star_component_1.StarComponent]
-                    }), 
+                ProductService = __decorate([
+                    core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
-                ], PlayersListComponent);
-                return PlayersListComponent;
+                ], ProductService);
+                return ProductService;
             }());
-            exports_1("PlayersListComponent", PlayersListComponent);
+            exports_1("ProductService", ProductService);
         }
     }
 });
-//# sourceMappingURL=players-list.component.js.map
+//# sourceMappingURL=product.service.js.map

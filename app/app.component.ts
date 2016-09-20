@@ -1,14 +1,17 @@
 import {Component} from 'angular2/core';
-import {PlayersListComponent} from  './players/players-list.component';
+import {PlayersListComponent} from  './products/players-list.component';
+import {ProductService} from './products/product.service';
 
 @Component({
-  selector:'fc-app',
-  template : `<div>
+    selector: 'fc-app',
+    template: `<div>
                    <h1>{{pageTitle}}</h1>                                                                                                                                                             
                    <fc-maneger></fc-maneger>
               </div>`,
-              directives: [PlayersListComponent]
+    directives: [PlayersListComponent],
+    providers:[ProductService]
+
 })
-export class AppComponent{
-    pageTitle: string ="Product Management ";
+export class AppComponent {
+    pageTitle: string = "Product Management ";
 }
