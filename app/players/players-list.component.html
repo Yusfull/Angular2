@@ -43,8 +43,10 @@
                         <td>{{product.productCode | lowercase}}</td>
                         <td>{{product.releaseDate}}</td>
                         <td>{{product.price | currency:'ZAR':true}}</td>
-                        <td>{{product.starRating}}</td>
-                        
+                        <td>
+							<xy-star [rating]='product.starRating'
+							    (ratingClicked)='onRatingClicked($event)'></xy-star>
+						</td>
                     </tr>
     			</tbody>
     		</table>
