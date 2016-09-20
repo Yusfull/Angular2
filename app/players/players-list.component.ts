@@ -2,8 +2,9 @@ import {Component} from 'angular2/core';
 import {IProduct} from './product';
 @Component({
    selector: 'fc-maneger',
-   templateUrl:'app/players/players-list.component.html'
-})
+   templateUrl:'app/players/players-list.component.html',
+   styleUrls:['app/products/product-list.component.css']
+  })
 export class PlayersListComponent {
  pageTitle: string ='Product List';
  imageWidth: number = 50;

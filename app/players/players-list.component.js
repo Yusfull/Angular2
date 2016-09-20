@@ -84,7 +84,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 PlayersListComponent = __decorate([
                     core_1.Component({
                         selector: 'fc-maneger',
-                        templateUrl: 'app/players/players-list.component.html'
+                        templateUrl: 'app/players/players-list.component.html',
+                        styleUrls: ['app/products/product-list.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
                 ], PlayersListComponent);
