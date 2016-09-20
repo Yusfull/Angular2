@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['angular2/core', './product-filter.pipe'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,15 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, product_filter_pipe_1;
     var PlayersListComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (product_filter_pipe_1_1) {
+                product_filter_pipe_1 = product_filter_pipe_1_1;
             }],
         execute: function() {
             PlayersListComponent = (function () {
@@ -81,11 +84,15 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 PlayersListComponent.prototype.toggleImage = function () {
                     this.showImage = !this.showImage;
                 };
+                PlayersListComponent.prototype.ngOnInit = function () {
+                    console.log('In OnInit');
+                };
                 PlayersListComponent = __decorate([
                     core_1.Component({
                         selector: 'fc-maneger',
                         templateUrl: 'app/players/players-list.component.html',
-                        styleUrls: ['app/products/product-list.component.css']
+                        styleUrls: ['app/players/product-list.component.css'],
+                        pipes: [product_filter_pipe_1.ProductFilterPipe]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], PlayersListComponent);
